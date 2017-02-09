@@ -1,0 +1,1277 @@
+@charset "UTF-8";
+@import "fonts/fonts.css";
+/* FUNCTIONS */
+/*! VARIABLES */
+.navy {
+  color: #223c76;
+}
+.red {
+  color: #cc2030;
+}
+.blue {
+  color: #00aeef;
+}
+/*! GLOBAL */
+html,
+body {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img,
+ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+body {
+  font-size: 100%;
+  background-color: #e6e7e8;
+}
+section {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  overflow-x: hidden;
+}
+.contentContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.vline-div {
+  padding: 0 5px;
+}
+input {
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+html {
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+input,
+textarea,
+button {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+input[type="submit"]::-moz-focus-inner,
+[type="button"]::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+  margin-top: -4px;
+}
+textarea {
+  resize: none;
+}
+a:focus {
+  outline: none;
+}
+.stretch {
+  width: 100%;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0;
+}
+.valign {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: justify;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -ms-flex-pack: center;
+}
+.valign-l {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: justify;
+  justify-content: center;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -ms-flex-pack: center;
+}
+.valign-r {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: justify;
+  justify-content: center;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -ms-flex-pack: center;
+}
+.valign-b {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: justify;
+  justify-content: flex-end;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -ms-flex-pack: center;
+}
+.abs-fill {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.abs {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.bgcover {
+  background: url('') center center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.inline-c {
+  display: inline-block;
+  vertical-align: middle;
+}
+.inline-t {
+  display: inline-block;
+  vertical-align: top;
+}
+.justify {
+  text-align: justify;
+  -ms-text-justify: distribute-all-lines;
+  text-justify: distribute-all-lines;
+}
+.noshrink {
+  -webkit-flex-shrink: 0;
+  -ms-flex: -1;
+  flex-shrink: 0;
+}
+.allowgrow {
+  -webkit-flex-grow: 1;
+  -ms-flex: 1;
+  flex-grow: 1;
+}
+.spacer {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.filler {
+  visibility: hidden;
+}
+.mob {
+  display: none;
+}
+.col {
+  position: relative;
+}
+.row {
+  width: 100%;
+  position: relative;
+}
+.spaced {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+.spaced-c {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+.spaced-t {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+.overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  display: none;
+  opacity: 0;
+  z-index: 60;
+}
+.blanket {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: .95;
+  z-index: 1;
+}
+.overlayWrap {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  padding: 0 50px;
+  -webkit-transform: translateZ(0);
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 30;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.spinner {
+  -webkit-animation: spin infinite 8s linear;
+  -moz-animation: spin infinite 8s linear;
+  animation: spin infinite 8s linear;
+}
+@-webkit-keyframes slider {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -134px 0px;
+  }
+}
+@keyframes slider {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -134px 0px;
+  }
+}
+.slide-diags {
+  -webkit-animation: slider infinite 2s linear;
+  -moz-animation: slider infinite 2s linear;
+  animation: slider infinite 2s linear;
+}
+@-webkit-keyframes slider2 {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -66px 0px;
+  }
+}
+@keyframes slider2 {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: -66px 0px;
+  }
+}
+.slide-diags2 {
+  -webkit-animation: slider2 infinite 1s linear;
+  -moz-animation: slider2 infinite 1s linear;
+  animation: slider2 infinite 1s linear;
+}
+/*! HEADER */
+#ig-header {
+  text-align: center;
+  padding: 85px 50px;
+  background-color: #fff;
+}
+#ig-header .logo {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 560px;
+  display: inline-block;
+}
+#ig-header h1 {
+  font: 400 8.5em/.875 "Industry-Bold", sans-serif;
+  margin: 55px 0 0;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+}
+#ig-header p {
+  font: 400 1.75em/1.35 "Gotham-Medium", sans-serif;
+  color: #5b5c5c;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+#ig-header .hline {
+  display: inline-block;
+  width: 230px;
+  height: 6px;
+  background-color: #cc2030;
+  margin: 25px 0;
+}
+/*! TRENDS */
+#ig-trends {
+  background-color: #e6e7e8;
+  padding: 105px 0 100px;
+}
+#ig-trends .diags {
+  width: 100%;
+  height: 40px;
+  background: url(../images/diags-top@2x.jpg);
+  background-size: 134px 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-animation: slider infinite 2s linear;
+  -moz-animation: slider infinite 2s linear;
+  animation: slider infinite 2s linear;
+}
+#ig-trends h2 {
+  font: 400 56px/.9 "Industry-Bold", sans-serif;
+  color: #223c76;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  margin: 0 auto;
+  text-align: center;
+}
+#ig-trends h3 {
+  font: 400 8em/1 "Industry-Bold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+}
+#ig-trends h4 {
+  font: 400 24px/.95 "Industry-Bold", sans-serif;
+  color: #223c76;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+#ig-trends p {
+  font: 400 17px/1.25 "Gotham-Light", sans-serif;
+  color: #5b5c5c;
+}
+#ig-trends .trends-graphics {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  margin-top: 20px;
+}
+#ig-trends .trends-graphics > .col {
+  width: 50%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+}
+#ig-trends .trends-graphics > .col.left {
+  text-align: right;
+  padding-right: 25px;
+}
+#ig-trends .trends-graphics > .col.left .trend-graphic {
+  margin-top: 15px;
+  position: relative;
+}
+#ig-trends .trends-graphics > .col.right {
+  text-align: left;
+  padding-left: 25px;
+}
+#ig-trends .trends-graphics > .col.right .trend-graphic {
+  margin-top: 18px;
+  position: relative;
+}
+#ig-trends .trends-graphics .col.text {
+  width: 40%;
+  -webkit-flex-shrink: 0;
+  -ms-flex: -1;
+  flex-shrink: 0;
+}
+#ig-trends .trends-graphics .col.graphic {
+  width: 60%;
+}
+#ig-trends .trends-graphics .col.graphic img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 350px;
+}
+#ig-trends .trends-graphics .trend-graphic .trend-car {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-width: 350px;
+}
+#ig-trends .trends-graphics .trend-graphic.right .trend-car {
+  z-index: 4;
+}
+#ig-trends .trends-graphics .trend-graphic.right .trend-car[data-num="4"] {
+  z-index: 0;
+}
+#ig-trends .trends-graphics .trend-graphic.right .trend-car[data-num="5"] {
+  z-index: 1;
+}
+#ig-trends .trends-graphics .trend-graphic.right .trend-car[data-num="6"] {
+  z-index: 2;
+}
+/*! ADVANTAGE */
+#ig-advantage {
+  padding: 50px 0;
+  height: 1060px;
+  background: url(../images/advantage-bg.png) repeat-x;
+  background-size: 100px 100%;
+  text-align: center;
+  overflow: hidden;
+}
+#ig-advantage h2 {
+  font: 400 4.85em/.85 "Industry-Bold", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: -0.09em;
+}
+#ig-advantage h2 .sm {
+  font-size: .65em;
+  letter-spacing: -0.05em;
+}
+#ig-advantage .hline {
+  display: inline-block;
+  width: 230px;
+  height: 6px;
+  background-color: #df3f52;
+  margin: 30px 0 35px;
+}
+#ig-advantage p {
+  font: 400 19px/1.6 "Gotham-Medium", sans-serif;
+  color: #fff;
+  width: 100%;
+  max-width: 530px;
+  margin: 0 auto;
+}
+#ig-advantage .notch {
+  position: absolute;
+  left: 0;
+  top: 0;
+  left: 50%;
+  margin-left: -36px;
+  width: 0;
+  height: 0;
+  border-left: 36px solid transparent;
+  border-right: 36px solid transparent;
+  border-top: 32px solid #e6e7e8;
+}
+#ig-advantage .txt-contents {
+  position: relative;
+  z-index: 5;
+}
+#ig-advantage .advantage-graphics {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2400px;
+  left: 50%;
+  margin-left: -1200px;
+}
+#ig-advantage .advantage-graphics .adv-img {
+  position: absolute;
+  left: 50%;
+}
+#ig-advantage .advantage-graphics .adv-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#ig-advantage .advantage-graphics .carbg {
+  width: 1170px;
+  margin-left: -585px;
+  top: 240px;
+}
+#ig-advantage .advantage-graphics .arm1 {
+  width: 890px;
+  left: 65px;
+  top: 35px;
+}
+#ig-advantage .advantage-graphics .arm2 {
+  width: 720px;
+  left: 55px;
+  top: 535px;
+}
+#ig-advantage .advantage-graphics .arm3 {
+  width: 480px;
+  left: 1145px;
+  top: 870px;
+}
+#ig-advantage .advantage-graphics .arm4 {
+  width: 765px;
+  left: auto;
+  right: 150px;
+  top: -40px;
+}
+#ig-advantage .advantage-graphics .arm5 {
+  width: 765px;
+  left: auto;
+  right: -10px;
+  top: 535px;
+}
+#ig-advantage .adv-cogs {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1200px;
+  left: 50%;
+  margin-left: -600px;
+  z-index: 6;
+}
+#ig-advantage .adv-cogs h3 {
+  font: 400 40px/.9 "Industry-Demi", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -0.04em;
+}
+#ig-advantage .adv-cogs .adv-cog {
+  position: absolute;
+  width: 284px;
+  height: 284px;
+  cursor: pointer;
+}
+#ig-advantage .adv-cogs .adv-cog .front,
+#ig-advantage .adv-cogs .adv-cog .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: justify;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -ms-flex-pack: center;
+}
+#ig-advantage .adv-cogs .adv-cog .cog-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+#ig-advantage .adv-cogs .adv-cog .cog-bg img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#ig-advantage .adv-cogs .adv-cog[data-num="1"] {
+  left: 10px;
+  top: 298px;
+}
+#ig-advantage .adv-cogs .adv-cog[data-num="2"] {
+  left: 160px;
+  top: 595px;
+}
+#ig-advantage .adv-cogs .adv-cog[data-num="3"] {
+  left: 460px;
+  top: 720px;
+}
+#ig-advantage .adv-cogs .adv-cog[data-num="4"] {
+  right: 160px;
+  top: 595px;
+}
+#ig-advantage .adv-cogs .adv-cog[data-num="5"] {
+  right: 10px;
+  top: 298px;
+}
+#ig-advantage .adv-cogs .adv-cog .front {
+  /*display: none;*/
+}
+#ig-advantage .adv-cogs .adv-cog .front .icon {
+  color: #fff;
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+#ig-advantage .adv-cogs .adv-cog .front .icon-flex {
+  font-size: 92px;
+  margin-top: -70px;
+  margin-bottom: 30px;
+}
+#ig-advantage .adv-cogs .adv-cog .back {
+  display: none;
+  padding: 0 40px;
+}
+#ig-advantage .adv-cogs .adv-cog .back .icon {
+  color: #fff;
+  font-size: 1.5em;
+  margin-bottom: 8px;
+}
+#ig-advantage .adv-cogs .adv-cog .back p {
+  font: 400 16px/1.4 "Gotham-Light", sans-serif;
+  color: #fff;
+}
+#ig-advantage .adv-cogs .adv-cog .back .hline {
+  display: inline-block;
+  width: 50px;
+  height: 3px;
+  background-color: #00aeef;
+  margin: 8px 0;
+}
+#ig-advantage .adv-cogs .adv-cog .back .round-btn {
+  margin-top: 12px;
+  display: inline-block;
+  padding: 6px 10px 4px;
+  background: #0f75bc;
+  background: -webkit-linear-gradient(top, #0f75bc, #0d599d);
+  background: -moz-linear-gradient(top, #0f75bc, #0d599d);
+  background: -o-linear-gradient(top, #0f75bc, #0d599d);
+  background: linear-gradient(top, #0f75bc, #0d599d);
+  font: 400 12px/1 "Industry-Bold", sans-serif;
+  color: #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+#ig-advantage .adv-cogs .adv-cog .back .round-btn span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+#ig-advantage .adv-cogs .adv-cog .back .icon-risk {
+  font-size: 2em;
+}
+#ig-advantage .adv-cogs .adv-cog .back .icon-flex {
+  font-size: 2.5em;
+}
+#ig-advantage .adv-cogs .adv-cog .back .icon-quality {
+  font-size: 2.25em;
+}
+#ig-footer {
+  background-color: #e7e7e8;
+  padding: 125px 0 105px;
+  text-align: center;
+}
+#ig-footer .logo {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 370px;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+#ig-footer h2 {
+  font: 400 40px/1 "Industry-Bold", sans-serif;
+  color: #09589a;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+#ig-footer p {
+  font: 400 24px/1.35 "Gotham-Book", sans-serif;
+  color: #5b5c5c;
+}
+#ig-footer .diags {
+  width: 100%;
+  height: 76px;
+  background: url(../images/diags-bot@2x.jpg);
+  background-size: 66px 76px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-animation: slider2 infinite 1s linear;
+  -moz-animation: slider2 infinite 1s linear;
+  animation: slider2 infinite 1s linear;
+}
+#ig-footer p.sm {
+  font: 400 14px/1 "Gotham-Book", sans-serif;
+  color: #5b5c5c;
+  margin-top: 55px;
+  margin-bottom: 30px;
+}
+#ig-footer .round-btn {
+  padding: 15px 35px;
+  background: #0f75bc;
+  background: -webkit-linear-gradient(top, #0f75bc, #0d599d);
+  background: -moz-linear-gradient(top, #0f75bc, #0d599d);
+  background: -o-linear-gradient(top, #0f75bc, #0d599d);
+  background: linear-gradient(top, #0f75bc, #0d599d);
+  font: 400 35px/1 "Industry-Bold", sans-serif;
+  color: #fff;
+  border-radius: 10px;
+  position: relative;
+}
+#ig-footer .round-btn span {
+  position: relative;
+}
+#ig-footer .round-btn .hovered {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #0d599d;
+  background: -webkit-linear-gradient(top, #0d599d, #0f75bc);
+  background: -moz-linear-gradient(top, #0d599d, #0f75bc);
+  background: -o-linear-gradient(top, #0d599d, #0f75bc);
+  background: linear-gradient(top, #0d599d, #0f75bc);
+  opacity: 0;
+  border-radius: 10px;
+  -webkit-transition: opacity 0.2s linear;
+  -moz-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+}
+/*! HOVERS (disabled below tablet) */
+@media screen and (min-width: 1025px) {
+  #ig-footer .round-btn:hover > .hovered {
+    opacity: 1;
+  }
+}
+/*! mq: 1200 */
+@media screen and (max-width: 1200px) {
+  body {
+    font-size: 80%;
+  }
+  #ig-header p {
+    max-width: 750px;
+  }
+  #ig-trends .trends-graphics > .col.left {
+    padding-right: 10px;
+  }
+  #ig-trends .trends-graphics > .col.right {
+    padding-left: 10px;
+  }
+  #ig-trends .trends-graphics .col.graphic,
+  #ig-trends .trends-graphics .col.text {
+    width: 50%;
+  }
+  #ig-advantage {
+    height: 980px;
+  }
+  #ig-advantage h2 {
+    letter-spacing: -0.05em;
+  }
+  #ig-advantage p {
+    max-width: 400px;
+  }
+  #ig-advantage .hline {
+    margin: 20px 0;
+  }
+  #ig-advantage .adv-cogs {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    top: 50px;
+  }
+  #ig-advantage .advantage-graphics {
+    transform: scale(0.8);
+    top: 120px;
+  }
+}
+/*! mq: 1024 */
+@media screen and (max-width: 1024px) {
+  #ig-header {
+    padding: 35px 25px;
+  }
+  #ig-header h1 {
+    font-size: 6.5em;
+    margin-top: 35px;
+  }
+  #ig-header .logo {
+    max-width: 350px;
+  }
+  #ig-footer p {
+    font-size: 18px;
+  }
+  #ig-trends {
+    padding: 75px 0 50px;
+  }
+  #ig-trends h2 {
+    font-size: 40px;
+  }
+}
+/*! mq: 900 */
+@media screen and (max-width: 900px) {
+  #ig-advantage {
+    height: auto;
+    padding-bottom: 0px;
+  }
+  #ig-advantage .advantage-graphics {
+    top: auto;
+    bottom: 1000px;
+  }
+  #ig-advantage .txt-contents {
+    padding: 0 25px;
+  }
+  #ig-advantage p {
+    max-width: 650px;
+  }
+  #ig-advantage .adv-cogs {
+    position: relative;
+    left: auto;
+    top: auto;
+    margin-left: 0;
+    z-index: 6;
+    -webkit-transform: scale(0.9);
+    -moz-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    -o-transform: scale(0.9);
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: justify;
+    justify-content: space-around;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+  }
+  #ig-advantage .adv-cogs .adv-cog {
+    position: relative;
+    width: 50%;
+    max-width: 284px;
+    left: auto !important;
+    top: auto !important;
+    right: auto !important;
+    margin-bottom: 20px;
+  }
+}
+/*! mq: 850 */
+@media screen and (max-width: 850px) {
+  #ig-trends {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  #ig-trends .trends-graphics {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    margin-top: 20px;
+  }
+  #ig-trends .trends-graphics > .col {
+    width: 50%;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: flex-start;
+    align-content: flex-start;
+  }
+  #ig-trends .trends-graphics > .col.left {
+    text-align: center;
+    padding-right: 20px;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: flex-end;
+    justify-content: flex-end;
+  }
+  #ig-trends .trends-graphics > .col.left .trend-graphic {
+    margin-top: 0px;
+  }
+  #ig-trends .trends-graphics > .col.right {
+    text-align: center;
+    padding-left: 20px;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: flex-start;
+    justify-content: flex-start;
+  }
+  #ig-trends .trends-graphics > .col.right .trend-graphic {
+    margin-top: 0px;
+  }
+  #ig-trends .trends-graphics > .col.right .text {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  #ig-trends .trends-graphics > .col.right .graphic {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  #ig-trends .trends-graphics .col.text {
+    width: 100%;
+    max-width: 300px;
+  }
+  #ig-trends .trends-graphics .col.graphic {
+    width: 100%;
+    max-width: 300px;
+  }
+  #ig-trends .trends-graphics .col.graphic img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 300px;
+  }
+}
+/*! mq: 768 */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 60%;
+  }
+  #ig-header p {
+    max-width: 550px;
+  }
+  #ig-footer {
+    padding: 75px 25px 60px;
+  }
+  #ig-footer h2 {
+    font-size: 30px;
+  }
+  #ig-footer .logo {
+    max-width: 250px;
+  }
+  #ig-footer p.sm {
+    margin-top: 35px;
+    margin-bottom: 25px;
+  }
+  #ig-footer .round-btn {
+    padding: 10px 25px;
+    font-size: 25px;
+  }
+}
+/*! mq: 600 */
+@media screen and (max-width: 600px) {
+  #ig-advantage {
+    padding-bottom: 20px;
+  }
+  #ig-advantage .advantage-graphics {
+    top: 400px;
+    bottom: auto;
+    -webkit-transform: scale(0.5);
+    -moz-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    -o-transform: scale(0.5);
+  }
+  #ig-advantage p {
+    font-size: 16px;
+  }
+  #ig-advantage .hline {
+    margin-top: 10px;
+  }
+  #ig-advantage .adv-cogs {
+    z-index: 6;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    display: block;
+    margin-top: 40px;
+  }
+  #ig-advantage .adv-cogs .adv-cog {
+    width: 100%;
+    max-width: 284px;
+    margin: 0 auto 20px;
+  }
+}
+/*! mq: 550 */
+@media screen and (max-width: 550px) {
+  #ig-header h1 {
+    font-size: 45px;
+  }
+  #ig-header p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  #ig-header .logo {
+    max-width: 250px;
+  }
+  #ig-footer h2 {
+    font-size: 30px;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  #ig-footer p {
+    font-size: 14px;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+/*! mq: 500 */
+@media screen and (max-width: 500px) {
+  #ig-trends .trends-graphics {
+    display: block;
+    margin-top: 20px;
+  }
+  #ig-trends .trends-graphics > .col {
+    width: 100%;
+  }
+  #ig-trends .trends-graphics > .col.left {
+    padding-right: 0px;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    z-index: 1;
+  }
+  #ig-trends .trends-graphics > .col.right {
+    padding-left: 0px;
+    margin-top: -20px;
+    z-index: 0;
+  }
+  #ig-trends .trends-graphics .col.text,
+  #ig-trends .trends-graphics .col.graphic {
+    margin: 0 auto;
+  }
+}
+/*! mq: 450 */
+@media screen and (max-width: 450px) {
+  #ig-advantage h2 {
+    font-size: 38px;
+  }
+  #ig-advantage [class^="arm"] {
+    display: none;
+  }
+  #ig-advantage .advantage-graphics {
+    display: none;
+  }
+}
+/*! mq: 400 */
+@media screen and (max-width: 400px) {
+  #ig-header h1 {
+    font-size: 40px;
+  }
+  #ig-header p {
+    font-size: 14px;
+  }
+  #ig-header .logo {
+    max-width: 250px;
+  }
+  #ig-footer h2 {
+    font-size: 26px;
+  }
+  #ig-footer .round-btn {
+    padding: 10px 25px;
+    font-size: 20px;
+  }
+  #ig-trends p {
+    font-size: 16px;
+    line-height: 1.35;
+  }
+}
+/*! mq: 374 */
+@media screen and (max-width: 374px) {
+  #ig-header h1 {
+    font-size: 35px;
+  }
+  #ig-header .hline {
+    margin: 15px 0;
+  }
+  #ig-trends h2 {
+    font-size: 35px;
+  }
+  #ig-footer .logo {
+    max-width: 200px;
+  }
+  #ig-footer h2 {
+    font-size: 22px;
+  }
+  #ig-advantage h2 {
+    font-size: 31px;
+  }
+}

@@ -1,0 +1,234 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>AM General Infographic</title>
+
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://i.icomoon.io/public/40a0b6fa5c/AMG/style.css">
+
+<link rel="shortcut icon" href="images/favicon.png" />
+<link href="css/normalize.css" rel="stylesheet" type="text/css" />
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+
+
+<body>
+
+
+	
+		
+<!--! BEGIN HEADER -->
+
+<section id="ig-header">
+	<div class="contentContainer">
+		
+		<img src="images/logo@2x.png" class="logo">
+		<h1><span class="navy">Meeting Global</span><br> <span class="red">Vehicle</span> <span class="blue">Demand</span></h1>
+		<div class="hline"></div>
+		<p>Strong vehicle demand to continue through 2023. Automakers will need more production capacity and flexibility.</p>
+		
+	</div>
+</section>
+
+<!-- END HEADER -->	
+
+
+
+
+
+<!--! BEGIN TRENDS -->
+
+<section id="ig-trends">
+	<div class="diags"></div>
+	<div class="contentContainer">
+		
+		<h2>Top Automotive<br> Manufacturing Trends</h2>
+		
+		<div class="row trends-graphics">
+			
+			<div class="col left">
+				<div class="col left graphic">
+					<div class="trend-graphic left">
+						<img src="images/trends-spacer.png" class="spacer">
+						<div class="trend-car" data-num="0"><img src="images/trends-shadow.png"></div>
+						<div class="trend-car" data-num="1"><img src="images/trends-left-img1.png"></div>
+						<div class="trend-car" data-num="2"><img src="images/trends-left-img2.png"></div>
+						<div class="trend-car" data-num="3"><img src="images/trends-left-img3.png"></div>
+						<div class="trend-car" data-num="4"><img src="images/trends-left-img4.png"></div>
+						<div class="trend-car" data-num="5"><img src="images/trends-left-img5.png"></div>
+						<div class="trend-car" data-num="6"><img src="images/trends-left-img6.png"></div>
+						<div class="trend-car" data-num="7"><img src="images/trends-left-img7.png"></div>
+					</div>
+				</div>
+				<div class="col right text">
+					<h3 class="red">2X</h3>
+					<h4>New Model<br> Introductions</h4>
+					<p>New program launches will double by 2019. OEMs are realizing the market demands increased differentiation in their product portfolios and are introducing specialty and low-volume variants to meet those demands.</p>
+				</div>
+			</div>
+			
+			<div class="col right">
+				<div class="col right text">
+					<h3 class="blue">50K</h3>
+					<h4>Annual volume<br> production</h4>
+					<p>As many as one-third of new launches will be low volume — fewer than 50,000 units. Automakers need to balance assembly plant capacity between mass market and ‘niche’ vehicles. </p>
+				</div>
+				<div class="col left graphic">
+					<div class="trend-graphic right">
+						<img src="images/trends-spacer.png" class="spacer">
+						<div class="trend-car" data-num="0"><img src="images/trends-shadow.png"></div>
+						<div class="trend-car" data-num="1"><img src="images/trends-right-img1.png"></div>
+						<div class="trend-car" data-num="2"><img src="images/trends-right-img2.png"></div>
+						<div class="trend-car" data-num="3"><img src="images/trends-right-img3.png"></div>
+						<div class="trend-car" data-num="4"><img src="images/trends-right-img4.png"></div>
+						<div class="trend-car" data-num="5"><img src="images/trends-right-img5.png"></div>
+						<div class="trend-car" data-num="6"><img src="images/trends-right-img6.png"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	</div>
+</section>
+
+<!-- END TRENDS -->	
+
+
+
+
+
+<!--! BEGIN ADVANTAGE -->
+
+<section id="ig-advantage">
+	
+	<div class="advantage-graphics">
+		<div class="carbg adv-img"><img src="images/bigcar@2x.png"></div>
+		<div class="arm1 adv-img"><img src="images/machine-arm1@2x.png"></div>
+		<div class="arm2 adv-img"><img src="images/machine-arm2@2x.png"></div>
+		<div class="arm3 adv-img"><img src="images/machine-arm3@2x.png"></div>
+		<div class="arm4 adv-img"><img src="images/machine-arm4@2x.png"></div>
+		<div class="arm5 adv-img"><img src="images/machine-arm5@2x.png"></div>
+	</div>
+	
+	<div class="notch"></div>
+	
+	<div class="txt-contents">
+		<h2><span class="sm">The</span><br> Contract Vehicle<br> Manufacturing<br> Advantage</h2>
+		<div class="hline"></div>
+		<p>AM General is a proven partner with 100+ years of experience producing more than 1.5 million vehicles. We have immediate and scalable capacity to meet low-volume production volumes up to 73,000 vehicles annually. AM General offers OEMs low risk, reduced investment costs and shortened time to market.</p>
+	</div>
+	
+	<div class="adv-cogs">
+		<div class="adv-cog" data-num="1">
+			<div class="cog-bg spinner"><img src="images/cog@2x.png"></div>
+			<div class="front">
+				<div class="icon icon-flag"></div>
+				<h3>AMERICAN</h3>
+			</div>
+			<div class="back">
+				<div class="icon icon-flag"></div>
+				<div class="hline"></div>
+				<p>AM General is the ONLY full-scale independent contract assembler<br> in the U.S.</p>
+				<a href="#" class="round-btn">Learn more <span>></span></a>
+			</div>
+		</div>
+		<div class="adv-cog" data-num="2">
+			<div class="cog-bg spinner"><img src="images/cog@2x.png"></div>
+			<div class="front">
+				<div class="icon icon-speedometer"></div>
+				<h3>SPEED</h3>
+			</div>
+			<div class="back">
+				<div class="icon icon-speedometer"></div>
+				<div class="hline"></div>
+				<p>Reduces OEM time to market.</p>
+				<a href="#" class="round-btn">Learn more <span>></span></a>
+			</div>
+		</div>
+		<div class="adv-cog" data-num="3">
+			<div class="cog-bg spinner"><img src="images/cog@2x.png"></div>
+			<div class="front">
+				<div class="icon icon-risk"></div>
+				<h3>LOWER<br>RISK</h3>
+			</div>
+			<div class="back">
+				<div class="icon icon-risk"></div>
+				<div class="hline"></div>
+				<p>Reduced capital investment and legacy costs.</p>
+				<a href="#" class="round-btn">Learn more <span>></span></a>
+			</div>
+		</div>
+		<div class="adv-cog" data-num="4">
+			<div class="cog-bg spinner"><img src="images/cog@2x.png"></div>
+			<div class="front">
+				<div class="icon icon-flex"></div>
+				<h3>FLEXIBILITY</h3>
+			</div>
+			<div class="back">
+				<div class="icon icon-flex"></div>
+				<div class="hline"></div>
+				<p>Lean manufacturing system tailored to meet changing product demands.</p>
+				<a href="#" class="round-btn">Learn more <span>></span></a>
+			</div>
+		</div>
+		<div class="adv-cog" data-num="5">
+			<div class="cog-bg spinner"><img src="images/cog@2x.png"></div>
+			<div class="front">
+				<div class="icon icon-quality"></div>
+				<h3>QUALITY</h3>
+			</div>
+			<div class="back">
+				<div class="icon icon-quality"></div>
+				<div class="hline"></div>
+				<p>Highly skilled union workforce and flexible lean manufacturing systems.</p>
+				<a href="#" class="round-btn">Learn more <span>></span></a>
+			</div>
+		</div>
+	</div>
+	
+</section>
+
+<!-- END ADVANTAGE -->
+
+
+
+
+
+<!--! BEGIN FOOTER -->
+
+<section id="ig-footer">
+	<div class="diags"></div>
+	
+	<div class="contentContainer">
+		
+		<img src="images/logo@2x.png" class="logo">
+		<h2>Strong vehicle demand expected to continue through 2023.</h2>
+		<p>Automakers will need more production capacity and flexibility.</p>
+		
+		<p class="sm">Learn more online:</p>
+		<a href="http://www.amgeneral.com" target="_blank" class="round-btn"><span class="hovered"></span><span>www.amgeneral.com</span></a>
+		
+	</div>
+</section>
+
+<!-- END FOOTER -->
+
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+<script src="js/amg.js"></script>
+
+<script type="text/javascript">
+</script>
+
+</body>
+</html>

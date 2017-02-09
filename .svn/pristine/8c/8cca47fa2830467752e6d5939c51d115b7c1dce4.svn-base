@@ -1,0 +1,56 @@
+var mobile = false;
+var mobileBreak = 768;
+if($(window).width() <= mobileBreak){mobile = true;}
+var is_firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+var path;
+function freezePage(){$('body').css({'width':'100%','height':'100%','overflow':'hidden'});}
+function unfreezePage(){$('body').css({'width':'','height':'','overflow':''});}
+function animScroll(sec, speed, offset){
+	activeOffset = $(sec).offset().top;	
+	TweenMax.to('html,body', speed, {scrollTop:activeOffset, ease:Expo.easeInOut});
+}
+// animScroll('#tier-contents',1,0);
+
+
+
+
+
+//! WINDOW RESIZE
+
+var winW;
+var winH;
+$(window).resize(function(){
+	winW = $(window).width();
+	winH = $(window).height();
+	console.log(winW);
+})
+
+
+
+
+
+//! ANIMATIONS
+
+function isScrolledIntoView(elem, dif){
+	vT = $(elem).offset().top-dif;
+	if(sT >= vT){
+		return true;
+	}
+}
+
+var animTrends = false;
+var animAdv = false;
+
+$(window).scroll(function(){
+	sT = Number($(document).scrollTop());
+	
+	if(isScrolledIntoView($('#ig-trends'), 400) && animTrends != true){
+		console.log("anim1");
+		animTrends = true;
+	}
+	
+	if(isScrolledIntoView($('#ig-advantage'), 300) && animAdv != true){
+		console.log("anim2");
+		animAdv = true;
+	}
+})
